@@ -22,8 +22,12 @@ Download the source code and click run in whatever code editor you use. Enter wh
 
 Prerequisites
 Code Editor of your Choice
-Python 3 https://www.python.org/
-AnyTree 'pip install anytree'
+
+Python 3 
+            https://www.python.org/
+
+AnyTree 
+            'pip install anytree'
 
 Usage
 We have a video and screenshots in our report demonstrating how it works.
