@@ -39,6 +39,8 @@ We have a video and screenshots in our report demonstrating how it works.
 
 **Acknowledgments:**
 
-Natalie Pedroza (Student of Computer Science)
+Jacob Almon (Undergraduate of Computer Science)
 
-Hannah Gonzalez (B.S. Mathematics of Education)
+Hannah Gonzalez (B.S. Mathematics Education, Minor in Computer Science)
+
+Natalie Pedroza (Undergraduate of Computer Science)
