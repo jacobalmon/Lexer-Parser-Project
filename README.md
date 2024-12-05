@@ -1,46 +1,71 @@
-**Lexer & Parser for TinyPie with GUI**
+# Lexer & Parser for TinyPie
 
-Lexer & Parser for TinyPie (language we created) with Graphical User Interface that allows users to process code for our language.
+## Introduction
+This project is a Lexer and Parser built for a custom language called TinyPie. It provides a graphical interface using `tkinter` to tokenize and parse input code, displaying the results and parse trees in real-time. The system follows a simplified grammar and uses `anytree` to visualize parse trees.
 
-**Introduction:**
+## Table of Contents
+- [Features](#features)
+- [Grammar Rules](#grammar-rules)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Configuration](#configuration)
+- [Contributors](#contributors)
 
-Our project allows users to process code for our language. TinyPie is a simple language that does math for integers and floating points, conditional statements, and print statements.  The language is very similar to C++ for syntax. This project is done in Python. The Lexer was built using regex to find tokens within the source code using the module 're'. The Parser was built using a left-derivation algorithm based on our BNF grammar.
+## Features
+- **Lexical Analysis**: Tokenizes input code into keywords, identifiers, operators, separators, and literals.
+- **Syntax Parsing**: Builds and visualizes parse trees based on predefined grammar.
+- **Real-time Processing**: Processes input line-by-line with on-screen updates.
+- **Tree Visualization**: Displays the generated parse tree for each line of code.
 
-Our BNF Grammar is:
+## Grammar Rules
+The project supports the following simplified grammar:
+- **Mathematical Expressions**:
+    ```plaintext
+    math_exp -> key id = math
+    math -> multi + multi
+    multi -> float * multi | int * multi | float | int
+    ```
+- **Conditional Statements**:
+    ```plaintext
+    if_exp -> if(comparison_exp):
+    comparison_exp -> id > id
+    ```
+- **Print Statements**:
+    ```plaintext
+    print_exp -> print("str_literal")
+    ```
 
-      math_exp -> key id = math
-      math -> multi + multi
-      multi -> float * multi | int * multi | float | int
-      
-      if_exp -> if(comparison_exp):
-      comparison_exp -> id > id
-      
-      print_exp -> print("str_literal")
-      
-The Graphical User Interface was built using the module 'tkinter', the GUI allows the user to input code and when the 'submit line' is clicked, the interface outputs the tokens, the parse tree explanation, and the parse tree itself pops up as well with a vertical scrollbar. Although the parse trees are shown in tkinter, the implementation required us to use two helper classes we developed and a library 'anytree' to get it working. This project gives a better understanding of how a Compiler works as we do two of the processes for it.
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-repo/tinypie-lexer-parser.git
+    ```
+2. Install the required Python packages:
+    ```bash
+    pip install tkinter anytree
+    ```
 
-**Getting Started:**
+## Usage
+1. Run the application:
+    ```bash
+    python your_script_name.py
+    ```
+2. Enter source code in the **Source Code** text box.
+3. Click **Next Line** to process each line and view tokens.
+4. View the generated parse tree in the **Tree Visualization** section.
+5. Click **EXIT** to close the application.
 
-Download the source code and click run in whatever code editor you use. Enter whatever code you want that works with our grammar, the grammar is mentioned above in the Introduction of this document and is also commented on within the source code.
+## Dependencies
+- **Python 3.x**
+- **tkinter**: For the GUI interface.
+- **anytree**: For parse tree visualization.
+- **re**: For regular expression-based tokenization.
 
-**Prerequisites:**
+## Configuration
+No special configuration is needed. You can modify the grammar or tokenization logic by editing the `cutOneLineTokens` function and parser methods.
 
-Code Editor of your Choice
+## Contributors
+Hannah Gonzalez
 
-Python 3 
-            https://www.python.org/
-
-AnyTree 
-            'pip install anytree'
-
-**Usage:**
-
-We have a video and screenshots in our report demonstrating how it works.
-
-**Acknowledgments:**
-
-Jacob Almon (Undergraduate of Computer Science)
-
-Hannah Gonzalez (B.S. Mathematics Education, Minor in Computer Science)
-
-Natalie Pedroza (Undergraduate of Computer Science)
+Natalie Pedroza
