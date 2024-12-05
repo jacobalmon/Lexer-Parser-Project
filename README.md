@@ -39,7 +39,7 @@ The project supports the following simplified grammar:
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/tinypie-lexer-parser.git
+    git clone https://github.com/jacobalmon/Lexer-Parser-Project.git
     ```
 2. Install the required Python packages:
     ```bash
@@ -49,7 +49,7 @@ The project supports the following simplified grammar:
 ## Usage
 1. Run the application:
     ```bash
-    python your_script_name.py
+    python source.py
     ```
 2. Enter source code in the **Source Code** text box.
 3. Click **Next Line** to process each line and view tokens.
